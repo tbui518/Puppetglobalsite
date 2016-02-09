@@ -29,3 +29,10 @@ node default {
   # Example:
   #   class { 'my_class': }
 }
+
+node "agent.ugpuppetmasterenterprise.com" {
+        include localusers
+        include localusers::groups::wheel
+        include localusers::groups::finance
+        notify {'This is a test notify':}
+}
